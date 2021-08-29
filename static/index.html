@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>A static page</title>
+  <link rel="stylesheet" href="/stylesheets/main.css">
+</head>
+<body>
+  <h1>Carboncopy site</h1>
+  <p>Continous search with ^ for specific matching and ~sentiment, :count</p>
+    {{if .Success}}
+      Updated search words.. {{ .Caret}} {{ .Sentiment}}
+    {{else}}
+    <form method="POST">
+        <label>words:</label>
+        <input type="text" name="words"><br />
+    </form>
+    {{end}}
+</body>
+</html>
